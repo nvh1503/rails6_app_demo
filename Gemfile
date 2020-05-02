@@ -78,4 +78,15 @@ gem 'nested_form_fields'
 # for location
 gem 'globalize'
 
+# grape api
+gem 'grape'
+gem 'grape-entity'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
+gem 'grape_logging'
+
+# gem 'grape-swagger-entity'
+# gem 'grape-swagger-representable'
+
+
 

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  # get 'users/index'
-  # get 'users/new'
-  # get 'users/create'
-  # get 'users/edit'
-  # get 'users/update'
-  # get 'users/destroy'
+
+  mount GrapeSwaggerRails::Engine => '/swagger' unless Rails.env.production?
+  
+  # mount Root => '/'
+  mount Exam::Root => '/'
+  
   get 'home/index'
   root 'home#index'
 

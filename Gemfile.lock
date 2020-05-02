@@ -122,6 +122,28 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
+    dry-configurable (0.11.5)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.4, >= 0.4.7)
+      dry-equalizer (~> 0.2)
+    dry-container (0.7.2)
+      concurrent-ruby (~> 1.0)
+      dry-configurable (~> 0.1, >= 0.1.3)
+    dry-core (0.4.9)
+      concurrent-ruby (~> 1.0)
+    dry-equalizer (0.3.0)
+    dry-inflector (0.2.0)
+    dry-logic (1.0.6)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 0.2)
+      dry-equalizer (~> 0.2)
+    dry-types (1.4.0)
+      concurrent-ruby (~> 1.0)
+      dry-container (~> 0.3)
+      dry-core (~> 0.4, >= 0.4.4)
+      dry-equalizer (~> 0.3)
+      dry-inflector (~> 0.1, >= 0.1.2)
+      dry-logic (~> 1.0, >= 1.0.2)
     enumerize (2.3.1)
       activesupport (>= 3.2)
     erubi (1.9.0)
@@ -141,6 +163,23 @@ GEM
       activemodel (>= 4.2, < 6.1)
       activerecord (>= 4.2, < 6.1)
       request_store (~> 1.0)
+    grape (1.3.2)
+      activesupport
+      builder
+      dry-types (>= 1.1)
+      mustermann-grape (~> 1.0.0)
+      rack (>= 1.3.0)
+      rack-accept
+    grape-entity (0.8.0)
+      activesupport (>= 3.0.0)
+      multi_json (>= 1.3.2)
+    grape-swagger (1.1.0)
+      grape (~> 1.3.0)
+    grape-swagger-rails (0.3.1)
+      railties (>= 3.2.12)
+    grape_logging (1.8.3)
+      grape
+      rack
     guard (2.16.2)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -194,6 +233,11 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.0)
     msgpack (1.3.3)
+    multi_json (1.14.1)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    mustermann-grape (1.0.1)
+      mustermann (>= 1.0.0)
     nenv (0.3.0)
     nested_form (0.3.2)
     nested_form_fields (0.8.2)
@@ -216,6 +260,8 @@ GEM
     puma (4.3.3)
       nio4r (~> 2.0)
     rack (2.2.2)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -279,6 +325,7 @@ GEM
     rspec-support (3.9.2)
     rspec_junit_formatter (0.4.1)
       rspec-core (>= 2, < 4, != 2.12.0)
+    ruby2_keywords (0.0.2)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -368,6 +415,11 @@ DEPENDENCIES
   faker!
   font-awesome-rails
   globalize
+  grape
+  grape-entity
+  grape-swagger
+  grape-swagger-rails
+  grape_logging
   guard (~> 2.14, >= 2.14.2)
   guard-rspec (~> 4.6.4)
   jbuilder (~> 2.7)

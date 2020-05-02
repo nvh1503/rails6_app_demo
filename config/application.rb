@@ -17,5 +17,8 @@ module Exam
     # the framework and any gems in your application.
     config.app_generators.scaffold_controller :responders_controller
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    # config.autoload_paths += Dir["#{Rails.root}/app"]
+    # config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    # config.autoload_paths += Dir["#{Rails.root}/app"]
   end
 end
