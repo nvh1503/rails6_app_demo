@@ -1,0 +1,30 @@
+h2.page_title Listing Users
+.dataTables_wrapper
+  = render 'shared/page_entries', collection: @users
+  .table-responsive
+    table.table
+      thead
+        tr
+          th.id[scope="col"] ID
+          th.username[scope="col"] Name
+          th[scope="col"] Email
+          th[scope="col"] User Name
+          th.user_type[scope="col"] User Type
+          th.action[scope="col"] Actions
+
+      tbody
+        - @users.each do |user|
+          tr
+            td = user.id
+            td = user.name
+            td = user.email
+            td = user.username
+            td.text-center = user.user_type.text
+            td 
+              = link_to 'Edit', edit_admin_user_path(user), class: "text-primary"
+              |&nbsp;|&nbsp;
+              = link_to 'Destroy', admin_user_path(user), data: { confirm: 'Are you sure?' }, method: :delete, class: "text-danger"
+
+    = render 'shared/paging', collection: @users
+    br
+= link_to 'New User', new_admin_user_path, class: "btn btn-primary"

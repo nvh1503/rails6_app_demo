@@ -1,0 +1,30 @@
+h2.page_title Test details
+
+p
+  span Name: 
+  strong = @test.name
+
+p 
+  span Description: 
+  strong = @test.description
+
+h3 Questions
+- if @test.questions.present?
+  - @test.questions.each do |question|
+    .card.card-cascade.card_question_details
+      .card-header-title
+        p 
+          strong = question.content
+        p = question.description
+      .card-body
+
+        - if question.options.present?
+          - question.options.each do |option|
+            .row.mt-2.option_content_box
+              - css_text = "text-primary" if option.is_correct_answer
+              .col-sm-10.text-right class="#{css_text}" = option.content
+              .col-sm-2.text-right
+                - if option.is_correct_answer
+                  .badge.badge-success Correct answer 
+br/
+= link_to 'Back', tests_path, class: "btn btn-secondary"

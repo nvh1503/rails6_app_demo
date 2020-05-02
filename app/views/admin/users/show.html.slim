@@ -1,0 +1,25 @@
+h2.page_title User details
+
+p
+  span Name: 
+  strong = @user.name
+
+p
+  span User Name: 
+  strong = @user.username
+
+p
+  span Email: 
+  strong = @user.email
+
+p
+  span User Type: 
+  strong = @user.user_type.text
+
+p
+  span Created_at: 
+  strong = format_datetime @user.created_at
+
+= link_to "Back", admin_users_path, class: "btn btn-secondary"
+| &nbsp; &nbsp;
+= link_to "Edit", edit_admin_user_path(@user), class: "btn btn-primary"

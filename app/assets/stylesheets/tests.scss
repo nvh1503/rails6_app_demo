@@ -1,0 +1,27 @@
+.card_question_info{
+  margin-top: 50px;
+}
+
+.option_content_box{
+  label{
+    margin-top: 0px !important;
+  }
+
+  .form-check-input {
+    margin-top: 10px;
+  }
+}
+
+.nested_remove{
+  color: red;
+}
+
+.card_question_remove{
+  position: absolute;
+  left: 100%;
+}
+
+.card_question_details{
+  margin-top: 20px;
+  padding: 20px;
+}

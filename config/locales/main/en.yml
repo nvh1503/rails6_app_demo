@@ -1,0 +1,12 @@
+en:
+  time:
+    am: am
+    formats:
+      default: "%d/%m/%Y %H:%M:%S"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: pm
+  enums:
+    user_type:
+      student: "Student"
+      teacher: "Teacher"

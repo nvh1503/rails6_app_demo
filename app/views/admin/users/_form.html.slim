@@ -1,0 +1,32 @@
+= simple_nested_form_for( [:admin, @user]) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+  .row.mt-2
+    .col-sm-3.text-right Name
+    .col-sm-8
+      = f.input :name, required: true, label: false
+
+  .row.mt-2
+    .col-sm-3.text-right Email
+    .col-sm-8
+      = f.input :email, required: true, label: false
+
+  - unless @user.present? && @user.id.present?
+    .row.mt-2
+      .col-sm-3.text-right Password
+      .col-sm-8
+        = f.input :password, required: true, label: false, hint: ("6 characters minimum") 
+    .row.mt-2
+      .col-sm-3.text-right Password Confirmation
+      .col-sm-8
+        = f.input :password_confirmation, required: true, label: false
+
+  .row.mt-2
+    .col-sm-3.text-right Role
+    .col-sm-3
+      = f.input :user_type, required: true, label: false
+
+  .form-actions
+    = link_to "Back", admin_users_path, class: "btn btn-secondary"
+    | &nbsp; &nbsp;
+    = f.button :submit, class: "btn btn-primary"

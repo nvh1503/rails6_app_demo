@@ -1,0 +1,176 @@
+body {
+  font-family: "Roboto",sans-serif;
+  font-weight: 300;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da !important;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.border-light {
+  border-color: #e0e0e0 !important;
+}
+
+.p-5 {
+   padding: 3rem !important;
+}
+
+button, input {
+  overflow: visible;
+}
+
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark-color(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: textfield;
+  // background-color: -internal-light-dark-color(white, black);
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 11px system-ui;
+  padding-left: 10px;
+  border-width: 2px !important;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  background-color: none !important;
+}
+
+span.error{
+  color: #f26f32;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn.btn-block {
+  margin: inherit;
+}
+
+.custom-control {
+  position: relative;
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  // margin-right: -5px;
+  // margin-left: -5px;
+}
+
+.form-row>.col, .form-row>[class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.error_notification, .error_explanation {
+  color: #dd7f71;
+}
+
+.check_box_remember_me{
+  margin-right: 5px;
+}
+
+.user_login_form_content{
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 50px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.waves-effect {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.d-flex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+.justify-content-around {
+  -ms-flex-pack: distribute !important;
+  justify-content: space-around !important;
+}

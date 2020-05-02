@@ -1,0 +1,60 @@
+= simple_nested_form_for @test  do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+  .row.mt-2
+    .col-sm-2.text-right Test Name
+    .col-sm-10
+      = f.input :name, label: false
+
+  .row.mt-2
+    .col-sm-2.text-right Test Description
+    .col-sm-10
+      = f.input :description, label: false, as: :text
+
+  = f.nested_fields_for :questions do |f_questions|
+    .card.card-cascade.card_question_info
+      .card_question_remove
+        = f_questions.remove_nested_fields_link do
+          = fa_stacked_icon "minus-circle", class: "nested_remove" 
+      / .card-header-title
+      /   h3 Questions
+      .card-body
+        .row.mt-2
+          .col-sm-2.text-right Question Content
+          .col-sm-10
+            = f_questions.input :content, label: false
+        .row.mt-2
+          .col-sm-2.text-right Question Description
+          .col-sm-10
+            = f_questions.input :description, label: false, as: :text
+
+        .row.mt-2
+          .col-sm-12
+            = f_questions.nested_fields_for :options do |f_options|
+              .row.mt-2
+                .col-sm-2.text-right Option
+                .col-sm-6
+                  = f_options.input :content, label: false
+                .col-sm-3.text-left.option_content_box
+                  = f_options.input :is_correct_answer, label: "Is correct answer"
+                .col-sm-1.text-left 
+                  = f_options.remove_nested_fields_link do
+                    = fa_stacked_icon "trash", class: "nested_remove" 
+                / .col-sm-1.text-right = fa_stacked_icon "trash"
+                
+            .row.mt-2
+              .col-sm-12.text-right    
+                = f_questions.add_nested_fields_link :options, "+ Option", class: "btn btn-info"
+
+
+
+    / = f.link_to_add "Add Question", :questions, :class => "btn btn-success"
+    / = f.link_to_add "Add a task", :questions, "data-target" => "#tasks"
+  .row.mt-2
+    .col-sm-12.text-right    
+      = f.add_nested_fields_link :questions, "+ Question", class: "btn btn-warning"
+
+  .form-actions
+    = link_to "Back", tests_path, class: "btn btn-secondary"
+    | &nbsp; &nbsp;
+    = f.button :submit, class: "btn btn-primary"

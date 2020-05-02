@@ -1,0 +1,41 @@
+.share_move_form_content{
+  display: block;
+  margin-top: 50px;
+  padding-left: 50px;
+
+  .card_title{
+    position: absolute;
+    background-color: #fff;
+    width: 300px;
+    top: 105px;
+    font-size: 25px;
+    padding-left: 10px;
+    // left: 10px;
+
+  }
+
+  .movie_form{
+    margin-top: 50px;
+    margin-right: 50px;
+
+  }
+}
+
+.movie_card_content{
+  margin-top: 50px;
+  iframe{
+    width: 420px;
+  }
+
+  .card-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ed9728;
+  }
+}
+
+.empty-data-content{
+  margin-top: 50px;
+  font-size: 50px;
+  font-weight: bold;
+}

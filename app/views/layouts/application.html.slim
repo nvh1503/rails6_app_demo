@@ -1,0 +1,35 @@
+doctype html
+html.full-height lang="en" 
+  head
+    title Exam
+    = csrf_meta_tags
+    = csp_meta_tag
+    
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' 
+    = javascript_include_tag 'application'
+
+    / = javascript_include_tag "nested_form"
+    / = javascript_include_tag 'nested_form'
+    / = javascript_include_tag :defaults, "nested_form"
+    / = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+
+  body
+    /! Main Navigation
+    header
+      =render 'shared/header'
+    main
+      .container.body_content
+        = yield
+
+    footer
+
+javascript:
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+
+  window.nestedFormEvents.insertFields = function(content, assoc, link) {
+    return $(link).closest('form').find(assoc + '_fields').append($(content));
+  }
+
