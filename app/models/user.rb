@@ -40,14 +40,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :authentication_keys => [:email]
-         # :authentication_keys => [:email, :username]
 
-  # validates :name, presence: true
   validates :email, presence: true
   validates :user_type, presence: true
 
   def self.api_find_for_database_authentication(warden_conditions)
-    puts "======= here ===="
     value = warden_conditions.delete :login
     if value.present?
       where("email = ? OR username = ?", value, value).first

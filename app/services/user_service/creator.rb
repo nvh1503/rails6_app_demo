@@ -17,6 +17,7 @@ module UserService
     end
 
     def send_confirmation_email(user)
+      # todo: implement function for sending email to user
       puts "======= Send email to user ========"
     end
 
