@@ -1,24 +1,59 @@
-# README
+# README - Rails 6: webpack - grape api demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technical Requied:
+* Rails 6.0.2
+* Ruby 2.7.1
+* Database: PostgreSQL
 
-Things you may want to cover:
+## How to run:
+* Clone the source from github: git@github.com:nvh1503/rails6_app_demo.git
+* Database configruation: rename file database.yml.example to database.yml
+* Run command:
+** bundle install
+** bundle exec rake db:create
+** bundle exec rake db:migrate
+** bundle exec rake db:seed
+* Start local server: rails s
 
-* Ruby version
+## How it works
+1. Web Admin (only teacher can access)
+* Administrators (user management)
+** Sign In
+** Sign Out
+** Create new user (roles: teacher and student)
+** Edit user info
+** Delete user
 
-* System dependencies
+* Test management
+** Create new test (a test has many questions, a question has many options)
+** Edit test
+** Delete test
 
-* Configuration
+2. API
+* Documment http://localhost:3000/swagger
+** Users API
+** User sign up
+** User sign in
+** User sign out
 
-* Database creation
+* Tests API
+** User gets list of tests
+** User gets details of test
+** User submits the test result
 
-* Database initialization
+3. Unit Test (Rspec)
+* Run RSPEC in local terminal: bundle exec rspec
 
-* How to run the test suite
+* Models
+** User model: spec/models/user_spec.rb
+** Test model: spec/models/test_spec.rb
+** Question model: spec/models/question_spec.rb
+** Option model: spec/models/option_spec.rb
 
-* Services (job queues, cache servers, search engines, etc.)
+* APIs
+User api: spec/api/users_spec.rb
+Test api: spec/api/tests_spec.rb
 
-* Deployment instructions
 
-* ...
+
+
