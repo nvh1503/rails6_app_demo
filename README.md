@@ -9,21 +9,21 @@
 
 ## How to run:
 
-*Clone the source from github: git@github.com:nvh1503/rails6_app_demo.git*
+- Clone the source from github: git@github.com:nvh1503/rails6_app_demo.git
 
-*Database configruation: rename file database.yml.example to database.yml*
+- Database configruation: rename file database.yml.example to database.yml*
 
-*Run command:*
+- Run command:
 
-**bundle install**
+* bundle install
 
-**bundle exec rake db:create**
+* bundle exec rake db:create
 
-**bundle exec rake db:migrate**
+* bundle exec rake db:migrate
 
-**bundle exec rake db:seed**
+* bundle exec rake db:seed
 
-* Start local server: rails s*
+- Start local server: rails s
 
 
 ## How it works
@@ -31,70 +31,70 @@
 
 1. Web Admin (only teacher can access)
 
-* Administrators (user management)
+- Administrators (user management)
 
-**Sign In**
+* Sign In
 
-**Sign Out**
+* Sign Out
 
-**Create new user (roles: teacher and student)**
+* Create new user (roles: teacher and student)
 
-**Edit user info**
+* Edit user info
 
-**Delete user**
+* Delete user
 
-* Test management*
+* Test management
 
-**Create new test (a test has many questions, a question has many options)**
 
-**Edit test**
+- Create new test (a test has many questions, a question has many options)
 
-**Delete test**
+* Edit test
+
+* Delete test
 
 
 2. API
 
-*Documment http://localhost:3000/swagger*
+- Documment http://localhost:3000/swagger
 
-**Users API**
+* Users API
 
-**User sign up**
+* User sign up
 
-**User sign in**
+* User sign in
 
-**User sign out**
+* User sign out
 
 
-*Tests API*
+- Tests API
 
-**User gets list of tests**
+* User gets list of tests
 
-**User gets details of test**
+* User gets details of test
 
-**User submits the test result**
+* User submits the test result
 
 
 3. Unit Test (Rspec)
 
-*Run RSPEC in local terminal: bundle exec rspec*
+- Run RSPEC in local terminal: bundle exec rspec
 
 
-*Models*
+- Models:
 
+* User model: spec/models/user_spec.rb
 
-**User model: spec/models/user_spec.rb**
+* Test model: spec/models/test_spec.rb
 
-**Test model: spec/models/test_spec.rb**
+* Question model: spec/models/question_spec.rb
 
-**Question model: spec/models/question_spec.rb**
+* Option model: spec/models/option_spec.rb
 
-**Option model: spec/models/option_spec.rb**
+- APIs:
 
-*APIs*
+* User api: spec/api/users_spec.rb
 
-**User api: spec/api/users_spec.rb**
-
-**Test api: spec/api/tests_spec.rb**
+* Test api: spec/api/tests_spec.rb
 
 
 
