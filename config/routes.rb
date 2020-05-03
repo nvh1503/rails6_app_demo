@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  mount GrapeSwaggerRails::Engine => '/swagger' unless Rails.env.production?
+  # mount GrapeSwaggerRails::Engine => '/swagger' unless Rails.env.production?
+  mount GrapeSwaggerRails::Engine => '/swagger'
   
   # mount Root => '/'
   mount Exam::Root => '/'
