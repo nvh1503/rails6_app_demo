@@ -1,4 +1,4 @@
-# README - Rails 6: webpack - grape api demo
+# README Rails 6: webpack - grape api demo
 
 ## Technical Requied:
 *Rails 6.0.2*
@@ -9,11 +9,11 @@
 
 ## How to run:
 
-- Clone the source from github: git@github.com:nvh1503/rails6_app_demo.git
+### Clone the source from github: git@github.com:nvh1503/rails6_app_demo.git
 
-- Database configruation: rename file database.yml.example to database.yml*
+### Database configruation: rename file database.yml.example to database.yml*
 
-- Run command:
+### Run command:
 
 * bundle install
 
@@ -23,7 +23,7 @@
 
 * bundle exec rake db:seed
 
-- Start local server: rails s
+### Start local server: rails s
 
 
 ## How it works
@@ -31,7 +31,7 @@
 
 1. Web Admin (only teacher can access)
 
-- Administrators (user management)
+### Administrators (user management)
 
 * Sign In
 
@@ -46,7 +46,7 @@
 * Test management
 
 
-- Create new test (a test has many questions, a question has many options)
+### Create new test (a test has many questions, a question has many options)
 
 * Edit test
 
@@ -55,7 +55,7 @@
 
 2. API
 
-- Documment http://localhost:3000/swagger
+### Documment http://localhost:3000/swagger
 
 * Users API
 
@@ -66,7 +66,7 @@
 * User sign out
 
 
-- Tests API
+### Tests API
 
 * User gets list of tests
 
@@ -77,10 +77,9 @@
 
 3. Unit Test (Rspec)
 
-- Run RSPEC in local terminal: bundle exec rspec
+### Run RSPEC in local terminal: bundle exec rspec
 
-
-- Models:
+### Models:
 
 * User model: spec/models/user_spec.rb
 
@@ -90,7 +89,7 @@
 
 * Option model: spec/models/option_spec.rb
 
-- APIs:
+### APIs:
 
 * User api: spec/api/users_spec.rb
 
