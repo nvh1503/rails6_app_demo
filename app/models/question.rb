@@ -20,7 +20,6 @@ class Question < ApplicationRecord
 
   accepts_nested_attributes_for :options, allow_destroy: true
 
-  validates :test_id, presence: true
   validates :content, presence: true
   
 end

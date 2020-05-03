@@ -85,8 +85,3 @@ gem 'grape-swagger'
 gem 'grape-swagger-rails'
 gem 'grape_logging'
 
-# gem 'grape-swagger-entity'
-# gem 'grape-swagger-representable'
-
-
-

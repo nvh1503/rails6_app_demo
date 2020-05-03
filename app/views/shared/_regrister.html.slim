@@ -1,15 +1,16 @@
 form.form-inline.top_user_form
   - if user_signed_in?
     .text-white 
-      = current_user.email
+      - user_email = current_user.email
+      strong = "#{user_email} (#{current_user.user_type.text})"
       |&nbsp; &nbsp; 
       = link_to "Logout", destroy_user_session_path, :method=>'delete', class: "btn btn-info"
 
   - else
     .md-form.text-white
       = link_to "Login", new_user_session_path, class: "text-white"
-      | &nbsp; 
-      ||
-      | &nbsp;
-      = link_to "Register", new_user_registration_path, class: "text-white"
+      / | &nbsp; 
+      / ||
+      / | &nbsp;
+      / = link_to "Register", new_user_registration_path, class: "text-white"
 

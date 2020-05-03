@@ -7,12 +7,11 @@ module Exam::Entities
     expose :email, documentation: { type: 'String', desc: 'Emai' }
     expose :username, documentation: { type: 'String', desc: 'username' }
     expose :user_type, documentation: { type: 'String', desc: 'User Type' }
+    expose :authentication_token, documentation: { type: 'String', desc: 'User authentication token' }
 
     with_options(format_with: :iso_timestamp) do
       expose :created_at, documentation: { type: 'Datetime', desc: 'Created at' }
       expose :updated_at, documentation: { type: 'Datetime', desc: 'Updated at' }
     end
-
-    
   end
 end

@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+  before_action :check_permission
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   respond_to :html

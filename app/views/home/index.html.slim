@@ -1,1 +1,68 @@
-h2.badge.badge-primary index
+h2.page_title Rails 6: webpack - grape api demo
+
+h3 Technical Requied:
+ul 
+  li Rails 6.0.2
+  li Ruby 2.7.1
+  li Database: PostgreSQL
+
+h3 How to run:
+ul
+  li 
+    strong Clone the source from github: 
+    strong git@github.com:nvh1503/rails6_app_demo.git
+  li 
+    strong Database configruation: 
+    strong rename file database.yml.example to database.yml
+  li 
+    strong Run command:
+    ul
+      li 
+        strong bundle install
+      li 
+        strong bundle exec rake db:create
+      li 
+        strong bundle exec rake db:migrate
+      li  
+        strong bundle exec rake db:seed
+
+  li
+    | Start local server: rails s
+
+h3 How it works
+h4 1. Web Admin (only teacher can access)
+ul
+  li 
+    strong Administrators (user management)
+    ul 
+      li Sign In
+      li Sign Out
+      li Create new user (roles: teacher and student)
+      li Edit user info
+      li Delete user
+
+  li 
+    strong Test management
+    ul
+      li Create new test (a test has many questions, a question has many options)
+      li Edit test
+      li Delete test
+
+h4 2. API 
+ul
+  li 
+    strong Documment 
+    - doc_url = request.protocol + request.host_with_port + "/swagger"
+    a href="#{doc_url}" target="_blank" = doc_url
+  li
+    strong Users API
+    ul
+      li User sign up
+      li User sign in
+      li User sign out
+    strong Tests API
+    ul
+      li User gets list of tests
+      li User gets details of test
+      li User submits the test result
+

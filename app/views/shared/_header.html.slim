@@ -1,12 +1,8 @@
 nav.navbar.navbar-expand-lg.navbar-dark.primary-color
-  / = link_to image_tag("/assets/statics/fun_logo.jpg"), "#", :class=>"navbar-brand nav_img_logo"
-
   .navbar-brand
     .nav_img_logo 
       = link_to root_path do
-        = fa_stacked_icon "fa-chalkboard-teacher"
-        / i.fas.fa-chalkboard-teacher
-    = link_to "EXAM", root_path,  class: "page_title text-white"
+        = fa_stacked_icon "home", class: "head_home_icon" 
   .navbar-menu
     =render 'shared/top_menu'
   .navbar-collapse

@@ -7,6 +7,10 @@ module Exam::Entities
     expose :content, documentation: { type: 'String', desc: 'Question content' }
     expose :description, documentation: { type: 'String', desc: 'Question Description' }
 
-    expose :options, using: Exam::Entities::Option
+    expose :options, 
+            using: Exam::Entities::Option,
+            if: lambda { |_object, options|
+              options[:include] && options[:include].include?('options')
+            }
   end
 end

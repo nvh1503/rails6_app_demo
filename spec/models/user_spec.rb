@@ -3,10 +3,12 @@
 # Table name: users
 #
 #  id                     :bigint           not null, primary key
+#  authentication_token   :string
 #  current_sign_in_at     :datetime
 #  current_sign_in_ip     :inet
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
+#  is_online              :boolean
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :inet
 #  name                   :string
@@ -21,6 +23,7 @@
 #
 # Indexes
 #
+#  index_users_on_authentication_token  (authentication_token)
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #  index_users_on_user_type             (user_type)

@@ -1,15 +1,39 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "======== Create example users ======="
+users = [
+  {
+    name: "Admin", 
+    username: "admin1",
+    email: "admin@example.com", 
+    password: "12345678", 
+    user_type: UserTypeEnum.user_type.teacher.value
+  },
+  {
+    name: "Teacher", 
+    username: "teacher1",
+    email: "teacher@example.com", 
+    password: "12345678", 
+    user_type: UserTypeEnum.user_type.teacher.value
+  },
+  {
+    name: "Student", 
+    username: "student1",
+    email: "student@example.com", 
+    password: "12345678", 
+    user_type: UserTypeEnum.user_type.student.value
+  },
+  {
+    name: "User", 
+    username: "user1",
+    email: "user@example.com", 
+    password: "12345678", 
+    user_type: UserTypeEnum.user_type.student.value
+  }
+]
+
+users.each do |user|
+  unless User.where(email: user[:email]).exists?
+    User.create(user)
+  end
+end
 
 
-User.create(
-  name: "Admin", 
-  email: "teacher@example.com", 
-  password: "12345678", 
-  user_type: UserTypeEnum.user_type.teacher.value
-) unless User.where(email: "teacher@example.com").exists?

@@ -11,7 +11,11 @@ module Exam::Entities
       expose :updated_at, documentation: { type: 'Datetime', desc: 'Updated at' }
     end
 
-    expose :questions, using: Exam::Entities::Question
+    expose :questions, 
+            using: Exam::Entities::Question,
+            if: lambda { |_object, options|
+              options[:include] && options[:include].include?('questions')
+            }
     
   end
 end
