@@ -29,7 +29,7 @@
 ## How it works
 
 
-1. Web Admin (only teacher can access)
+### 1. Web Admin (only teacher can access)
 
 ### Administrators (user management)
 
@@ -53,7 +53,7 @@
 * Delete test
 
 
-2. API
+### 2. API
 
 ### Documment http://localhost:3000/swagger
 
@@ -75,7 +75,7 @@
 * User submits the test result
 
 
-3. Unit Test (Rspec)
+### 3. Unit Test (Rspec)
 
 ### Run RSPEC in local terminal: bundle exec rspec
 
