@@ -27,8 +27,6 @@ module Exam::V1
       get ':id' do
         user_authenticate!
 
-        puts "====== api get test id: ", params
-
         test = Test.find_by(id: params[:id])
         present test, with: Exam::Entities::Test, include: ["questions", "options"]
       end
