@@ -6,14 +6,14 @@
 * Database: PostgreSQL
 
 ## How to run:
-* Clone the source from github: git@github.com:nvh1503/rails6_app_demo.git
-* Database configruation: rename file database.yml.example to database.yml
-* Run command:
-** bundle install
-** bundle exec rake db:create
-** bundle exec rake db:migrate
-** bundle exec rake db:seed
-* Start local server: rails s
+* Clone the source from github: git@github.com:nvh1503/rails6_app_demo.git *
+* Database configruation: rename file database.yml.example to database.yml *
+* Run command: *
+** bundle install **
+** bundle exec rake db:create **
+** bundle exec rake db:migrate **
+** bundle exec rake db:seed **
+* Start local server: rails s *
 
 ## How it works
 1. Web Admin (only teacher can access)
